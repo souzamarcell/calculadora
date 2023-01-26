@@ -1,0 +1,32 @@
+Manaus, 26 de Janeiro de 2023.
+
+*** Criando Projeto ***
+  npx create-react-app prolam
+
+*** Git ***
+  git init 
+  git status
+  git branch -M main
+  git add . 
+  git commit -m ":tada: initial commit"
+
+  https://github.com/souzamarcell
+  git remote add origin git@github.com:souzamarcell/firstStartReact.git
+
+  git push -u origin main
+
+
+*** Resumo ***
+  git add . 
+  git commit -m ":tada: secont commit"
+  git push -u origin main
+
+*** START ***
+  npm start
+
+*** Testar *** (TDD)
+  npm test
+
+
+
+
