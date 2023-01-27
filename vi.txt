@@ -1,6 +1,8 @@
 Manaus, 26 de Janeiro de 2023.
 ------------------------------
 
+# 2. Criando o projeto
+
 *** Criando Projeto ***
   npx create-react-app calculadora
 
@@ -19,7 +21,7 @@ Manaus, 26 de Janeiro de 2023.
 
 *** Resumo ***
   git add . 
-  git commit -m ":tada: secont commit"
+  git commit -m ":tada: 9. Implementando o campo numérico e entendo o useState - parte 12"
   git push -u origin main
 
 *** START ***
@@ -32,7 +34,23 @@ Manaus, 26 de Janeiro de 2023.
 Manaus, 27 de Janeiro de 2023.
 ------------------------------
 
-*** Instalação de componentes | biblioteca ***  
+*** Component Installation | library ***  
+  https://react-bootstrap.github.io/
   npm i react-bootstrap bootstrap --save
+
+*** Component Installation | library ***  
+  https://testing-library.com/
+  npm i @testing-library/react @testing-library/jest-dom --save-dev
+
+# 3. Instalando o Bootstrap e o React Bootstrap
+
+  bootstrap 12 colunas por padrão
+  cada botão 3 para 9 = 12
+  1 botao com 3 e outro com 9
+
+  bootstrap 12 colunas por padrão
+  cada botão 3 x 4 = 12
+  4 botões com 3 cada
+
 
 
