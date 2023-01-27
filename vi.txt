@@ -21,7 +21,7 @@ Manaus, 26 de Janeiro de 2023.
 
 *** Resumo ***
   git add . 
-  git commit -m ":tada: 9. Implementando o campo numérico e entendo o useState - parte 12"
+  git commit -m ":tada: parte 13 componente "
   git push -u origin main
 
 *** START ***
@@ -52,5 +52,6 @@ Manaus, 27 de Janeiro de 2023.
   cada botão 3 x 4 = 12
   4 botões com 3 cada
 
+# 13. Implementando o serviço principal da calculadora - parte 35
 
-
+  npm test 

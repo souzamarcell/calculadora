@@ -5,7 +5,7 @@
   "files.autoSave": "afterDelay",
 
   // prettier
-  "prettier.printWidth": 50,
+  "prettier.printWidth": 70,
 
   // preenchimento automático
   "emmet.includeLanguages": {
@@ -22,7 +22,12 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "cSpell.words": [
     "boostrap",
+    "divisao",
+    "multiplicacao",
     "Numeros",
+    "operacao",
+    "Operacao",
+    "subtracao",
     "testid"
   ]
 }
