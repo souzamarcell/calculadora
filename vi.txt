@@ -1,7 +1,8 @@
 Manaus, 26 de Janeiro de 2023.
+------------------------------
 
 *** Criando Projeto ***
-  npx create-react-app prolam
+  npx create-react-app calculadora
 
 *** Git ***
   git init 
@@ -11,7 +12,7 @@ Manaus, 26 de Janeiro de 2023.
   git commit -m ":tada: initial commit"
 
   https://github.com/souzamarcell
-  git remote add origin git@github.com:souzamarcell/firstStartReact.git
+  git remote add origin git@github.com:souzamarcell/calculadora.git
 
   git push -u origin main
 
@@ -28,5 +29,10 @@ Manaus, 26 de Janeiro de 2023.
   npm test
 
 
+Manaus, 27 de Janeiro de 2023.
+------------------------------
+
+*** Instalação de componentes | biblioteca ***  
+  npm i react-bootstrap bootstrap --save
 
 

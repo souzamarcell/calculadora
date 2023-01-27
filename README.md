@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Contato 
+ 
+[![Linkedin Badge](https://img.shields.io/badge/-Marcell%20Ramos%20de%20Souza-6633cc?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcellsouza/)](https://www.linkedin.com/in/marcellsouza/) 
+</div>
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT.
+
+---
+
+Feito com ♥ by Marcell Souza :wave: [Meu link de Developers Google!](https://developers.google.com/profile/u/marcellsouza)
