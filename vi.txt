@@ -21,7 +21,7 @@ Manaus, 26 de Janeiro de 2023.
 
 *** Resumo ***
   git add . 
-  git commit -m ":tada: parte 13 componente "
+  git commit -m ":tada: parte finally"
   git push -u origin main
 
 *** START ***

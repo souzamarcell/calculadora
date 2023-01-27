@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  color: ##007bff;
+
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: ##007bff;
+  /* border: solid #007bff */
+}

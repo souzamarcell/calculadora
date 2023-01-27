@@ -1,30 +1,73 @@
 import React, { useState } from 'react'
 import './calculadora.css'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap'
-// import CalculadoraService from './calculadora.service';
+import CalculadoraService from './calculadora.service'
 
 function Calculadora() {
-  // const [calcular, concatenarNumero, SOMA, SUBTRACAO, DIVISAO, MULTIPLICACAO] = CalculadoraService();
+  const [
+    calcular,
+    concatenarNumero,
+    SOMA,
+    SUBTRACAO,
+    DIVISAO,
+    MULTIPLICACAO,
+  ] = CalculadoraService()
 
   const [txtNumeros, setTxtNumeros] = useState('0')
-  // const [numero1, setNumero1] = useState('0')
-  // const [numero2, setNumero2] = useState(null)
-  // const [operacao, setOperacao] = useState(null)
+  const [numero1, setNumero1] = useState('0')
+  const [numero2, setNumero2] = useState(null)
+  const [operacao, setOperacao] = useState(null)
 
   function adicionarNumero(numero) {
-    // if (operacao === null) {
-    //   resultado = concatenarNumero(numero1, numero);
-    //   setNumero1(resultado);
-    // } else {
-    //   resultado = concatenarNumero(numero2, numero);
-    //   setNumero2(resultado);
-    // }
-    // setTxtNumeros(resultado);
-    setTxtNumeros(txtNumeros + numero)
+    let resultado
+    if (operacao === null) {
+      resultado = concatenarNumero(numero1, numero)
+      setNumero1(resultado)
+    } else {
+      resultado = concatenarNumero(numero2, numero)
+      setNumero2(resultado)
+    }
+    setTxtNumeros(resultado)
+    // setTxtNumeros(txtNumeros + numero)
   }
 
   function definirOperacao(op) {
-    setTxtNumeros(op)
+    // apenas define a operação caso ela não exista
+    if (operacao === null) {
+      setOperacao(op)
+      return
+    }
+    // caso operação estiver definida e número 2 selecionado, realiza o cálculo da operação
+    if (numero2 !== null) {
+      const resultado = calcular(
+        parseFloat(numero1),
+        parseFloat(numero2),
+        operacao
+      )
+      setOperacao(op)
+      setNumero1(resultado.toString())
+      setNumero2(null)
+      setTxtNumeros(resultado.toString())
+    }
+  }
+
+  function acaoCalcular() {
+    if (numero2 === null) {
+      return
+    }
+    const resultado = calcular(
+      parseFloat(numero1),
+      parseFloat(numero2),
+      operacao
+    )
+    setTxtNumeros(resultado)
+  }
+
+  function limpar() {
+    setTxtNumeros('0')
+    setNumero1('0')
+    setNumero2(null)
+    setOperacao(null)
   }
 
   return (
@@ -40,7 +83,9 @@ function Calculadora() {
       <Container>
         <Row>
           <Col xs="3">
-            <Button variant="danger">C</Button>
+            <Button variant="danger" onClick={limpar}>
+              C
+            </Button>
           </Col>
           <Col xs="9">
             <Form.Control
@@ -81,7 +126,7 @@ function Calculadora() {
           <Col>
             <Button
               variant="warning"
-              onClick={() => definirOperacao('/')}
+              onClick={() => definirOperacao(DIVISAO)}
             >
               /
             </Button>
@@ -115,7 +160,7 @@ function Calculadora() {
           <Col>
             <Button
               variant="warning"
-              onClick={() => definirOperacao('*')}
+              onClick={() => definirOperacao(MULTIPLICACAO)}
             >
               *
             </Button>
@@ -149,7 +194,7 @@ function Calculadora() {
           <Col>
             <Button
               variant="warning"
-              onClick={() => definirOperacao('-')}
+              onClick={() => definirOperacao(SUBTRACAO)}
             >
               -
             </Button>
@@ -165,15 +210,22 @@ function Calculadora() {
             </Button>
           </Col>
           <Col>
-            <Button variant="light">.</Button>
+            <Button
+              variant="light"
+              onClick={() => adicionarNumero('.')}
+            >
+              .
+            </Button>
           </Col>
           <Col>
-            <Button variant="success">=</Button>
+            <Button variant="success" onClick={acaoCalcular}>
+              =
+            </Button>
           </Col>
           <Col>
             <Button
               variant="warning"
-              onClick={() => definirOperacao('+')}
+              onClick={() => definirOperacao(SOMA)}
             >
               +
             </Button>
